@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Trachanhbuipho1" Class="TrachanhbuiphoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Trachanhbuipho1;Integrated Security=True" SettingsObjectName="demobtl.Properties.Settings" SettingsPropertyName="Trachanhbuipho1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BAN" Member="BANs">
+    <Type Name="BAN">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Ten Ban]" Member="Ten_Ban" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Trang Thai]" Member="Trang_Thai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BAN_HOADON" Member="HOADONs" ThisKey="ID" OtherKey="Ban" Type="HOADON" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHAMCONG" Member="CHAMCONGs">
+    <Type Name="CHAMCONG">
+      <Column Name="Ngay" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[ID NV]" Member="ID_NV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Trang Thai]" Member="Trang_Thai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="NHANVIEN_CHAMCONG" Member="NHANVIEN" ThisKey="ID_NV" OtherKey="ID" Type="NHANVIEN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETHOADON" Member="CHITIETHOADONs">
+    <Type Name="CHITIETHOADON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Hoa Don]" Member="Hoa_Don" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Mon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[So Luong]" Member="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOADON_CHITIETHOADON" Member="HOADON" ThisKey="Hoa_Don" OtherKey="ID" Type="HOADON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MON_CHITIETHOADON" Member="MON1" ThisKey="Mon" OtherKey="ID" Type="MON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Ten Khach]" Member="Ten_Khach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Trang Thai]" Member="Trang_Thai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Chiet Khau]" Member="Chiet_Khau" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Ban" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOADON_CHITIETHOADON" Member="CHITIETHOADONs" ThisKey="ID" OtherKey="Hoa_Don" Type="CHITIETHOADON" />
+      <Association Name="BAN_HOADON" Member="BAN1" ThisKey="Ban" OtherKey="ID" Type="BAN" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DANHMUCMON" Member="DANHMUCMONs">
+    <Type Name="DANHMUCMON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DANHMUCMON_MON" Member="MONs" ThisKey="ID" OtherKey="Danh_Muc" Type="MON" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MON" Member="MONs">
+    <Type Name="MON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MON_CHITIETHOADON" Member="CHITIETHOADONs" ThisKey="ID" OtherKey="Mon" Type="CHITIETHOADON" />
+      <Association Name="DANHMUCMON_MON" Member="DANHMUCMON" ThisKey="Danh_Muc" OtherKey="ID" Type="DANHMUCMON" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
+    <Type Name="NHANVIEN">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Ho Ten]" Member="Ho_Ten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="[Sinh Nhat]" Member="Sinh_Nhat" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Vi Tri]" Member="Vi_Tri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Luong/Ngay]" Member="Luong_Ngay" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="NHANVIEN_CHAMCONG" Member="CHAMCONGs" ThisKey="ID" OtherKey="ID_NV" Type="CHAMCONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="Username" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Fn_ThongKe" Method="Fn_ThongKe" IsComposable="true">
+    <Parameter Name="dau" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="cuoi" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="Fn_ThongKeResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Ten Khach]" Member="Ten_Khach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tổng_Tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Fn_ThongKeLuong" Method="Fn_ThongKeLuong" IsComposable="true">
+    <Parameter Name="dau" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="cuoi" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="Fn_ThongKeLuongResult">
+      <Column Name="[ID NV]" Member="ID_NV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Ho Ten]" Member="Ho_Ten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="So_Ngay_Lam_Viec" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Luong" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Fn_Report" Method="Fn_Report" IsComposable="true">
+    <Parameter Name="idbill" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Fn_ReportResult">
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Thanh_Tien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Fn_TienChuaCK" Method="Fn_TienChuaCK" IsComposable="true">
+    <Parameter Name="idbll" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Double" />
+  </Function>
+</Database>
