@@ -26,6 +26,13 @@
       <Association Name="MON_CHITIETHOADON" Member="MON1" ThisKey="Mon" OtherKey="ID" Type="MON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.DANHMUCMON" Member="DANHMUCMONs">
+    <Type Name="DANHMUCMON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DANHMUCMON_MON" Member="MONs" ThisKey="ID" OtherKey="Danh_Muc" Type="MON" />
+    </Type>
+  </Table>
   <Table Name="dbo.HOADON" Member="HOADONs">
     <Type Name="HOADON">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -36,13 +43,6 @@
       <Column Name="Ban" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HOADON_CHITIETHOADON" Member="CHITIETHOADONs" ThisKey="ID" OtherKey="Hoa_Don" Type="CHITIETHOADON" />
       <Association Name="BAN_HOADON" Member="BAN1" ThisKey="Ban" OtherKey="ID" Type="BAN" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DANHMUCMON" Member="DANHMUCMONs">
-    <Type Name="DANHMUCMON">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="DANHMUCMON_MON" Member="MONs" ThisKey="ID" OtherKey="Danh_Muc" Type="MON" />
     </Type>
   </Table>
   <Table Name="dbo.MON" Member="MONs">
@@ -71,8 +71,18 @@
       <Column Name="Username" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Password" Type="System.String" DbType="Char(500) NOT NULL" CanBeNull="false" />
       <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Function Name="dbo.Fn_Report" Method="Fn_Report" IsComposable="true">
+    <Parameter Name="idbill" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Fn_ReportResult">
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Thanh_Tien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.Fn_ThongKe" Method="Fn_ThongKe" IsComposable="true">
     <Parameter Name="dau" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="cuoi" Type="System.DateTime" DbType="DateTime" />
@@ -91,15 +101,6 @@
       <Column Name="[Ho Ten]" Member="Ho_Ten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="So_Ngay_Lam_Viec" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Luong" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Fn_Report" Method="Fn_Report" IsComposable="true">
-    <Parameter Name="idbill" Type="System.Int32" DbType="Int" />
-    <ElementType Name="Fn_ReportResult">
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Gia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Thanh_Tien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.Fn_TienChuaCK" Method="Fn_TienChuaCK" IsComposable="true">

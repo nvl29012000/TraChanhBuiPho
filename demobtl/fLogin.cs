@@ -35,7 +35,7 @@ namespace demobtl
         {
             using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
             {
-                TAIKHOAN query = (from ac in db.TAIKHOANs where ac.Username.Equals(txbusername.Text) && ac.Password.Equals(txbpassword.Text) select ac).SingleOrDefault();
+                TAIKHOAN query = (from ac in db.TAIKHOANs where ac.Username.Equals(txbusername.Text) && ac.Password.Equals(txbpassword.Text) && ac.Active==true select ac).SingleOrDefault();
                 if (query == null)
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu sai");
@@ -45,6 +45,7 @@ namespace demobtl
                     if (query.Admin == false)
                 {
                     fGiaoDien f = new fGiaoDien();
+                    f.Tag = query;
                     this.Hide();
                     f.ShowDialog();
                     txbusername.ResetText();

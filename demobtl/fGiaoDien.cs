@@ -89,7 +89,7 @@ namespace demobtl
         {
             using(TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
             {
-                int billid = (from hd in db.HOADONs where hd.Ban.Equals(id) && hd.Trang_Thai == false select hd.ID).SingleOrDefault();
+                int billid = (from hd in db.HOADONs where hd.Ban.Equals(id) && hd.Trang_Thai == false select hd.ID).SingleOrDefault();    
                 List<CHITIETHOADON> listbillinfor = (from cthd in db.CHITIETHOADONs where cthd.Hoa_Don.Equals(billid) select cthd).ToList<CHITIETHOADON>();
                 loadListBill(listbillinfor);
             }    
@@ -111,10 +111,16 @@ namespace demobtl
                     fCreateBill f = new fCreateBill();
                     f.table(a);
                     f.ShowDialog();
-                    a.Trang_Thai = !a.Trang_Thai;
-                    db.SubmitChanges();
-                    (sender as Button).BackColor = Color.Green;
-                    showBill(tableID);
+                    int idbill = (from hd in db.HOADONs where hd.Ban.Equals(tableID) && hd.Trang_Thai == false select hd.ID).SingleOrDefault();
+                    if (idbill != 0)
+                    {
+                        a.Trang_Thai = !a.Trang_Thai;
+                        db.SubmitChanges();
+                        (sender as Button).BackColor = Color.Green;
+                        showBill(tableID);
+                    }
+                    else
+                        return;
                 }
                 else
                     showBill(tableID);
@@ -148,8 +154,13 @@ namespace demobtl
                     return;
                 }    
                 HOADON select = (from hd in db.HOADONs where hd.Ban.Equals(choose.ID) && hd.Trang_Thai == false select hd).SingleOrDefault();
+                if(select == null)
+                {
+                    MessageBox.Show("Bàn được chọn hiện trống! Hãy tạo hóa đơn cho bàn trước khi thêm món");
+                    return;
+                }    
                 CHITIETHOADON insert = new CHITIETHOADON();
-                insert.Hoa_Don = select.ID;
+                insert.Hoa_Don = select.ID;  
                 insert.Mon = (from food in db.MONs where food.Ten.Equals(cbfood.SelectedItem.ToString()) select food.ID).SingleOrDefault();
                 insert.So_Luong = Convert.ToInt32(nmrcount.Value);
                 db.CHITIETHOADONs.InsertOnSubmit(insert);
@@ -164,7 +175,7 @@ namespace demobtl
             using(TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
             {
                 BAN choose = lsvbill.Tag as BAN;
-                if(choose==null)
+                if(choose==null || choose.Trang_Thai==false)
                 {
                     MessageBox.Show("Vui lòng chọn bàn cần thanh toán");
                     return;
@@ -176,7 +187,7 @@ namespace demobtl
                     focus1.BackColor = Color.Blue;
                     return;
                 }
-                if (MessageBox.Show(String.Format("Xác nhận thanh toán bàn {0} cho khách hàng {1} với số tiền {2}", choose.Ten_Ban, select.Ten_Khach, txbsum.Text),
+                if (MessageBox.Show(String.Format("Xác nhận thanh toán bàn {0} cho khách hàng {1} với số tiền {2}", choose.Ten_Ban.ToUpper(), select.Ten_Khach.ToUpper(), txbsum.Text),
                     "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
                     return;
                 select.Chiet_Khau = Convert.ToDouble(nmrdiscount.Value / 100);

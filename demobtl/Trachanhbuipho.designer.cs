@@ -39,12 +39,12 @@ namespace demobtl
     partial void InsertCHITIETHOADON(CHITIETHOADON instance);
     partial void UpdateCHITIETHOADON(CHITIETHOADON instance);
     partial void DeleteCHITIETHOADON(CHITIETHOADON instance);
-    partial void InsertHOADON(HOADON instance);
-    partial void UpdateHOADON(HOADON instance);
-    partial void DeleteHOADON(HOADON instance);
     partial void InsertDANHMUCMON(DANHMUCMON instance);
     partial void UpdateDANHMUCMON(DANHMUCMON instance);
     partial void DeleteDANHMUCMON(DANHMUCMON instance);
+    partial void InsertHOADON(HOADON instance);
+    partial void UpdateHOADON(HOADON instance);
+    partial void DeleteHOADON(HOADON instance);
     partial void InsertMON(MON instance);
     partial void UpdateMON(MON instance);
     partial void DeleteMON(MON instance);
@@ -110,19 +110,19 @@ namespace demobtl
 			}
 		}
 		
-		public System.Data.Linq.Table<HOADON> HOADONs
-		{
-			get
-			{
-				return this.GetTable<HOADON>();
-			}
-		}
-		
 		public System.Data.Linq.Table<DANHMUCMON> DANHMUCMONs
 		{
 			get
 			{
 				return this.GetTable<DANHMUCMON>();
+			}
+		}
+		
+		public System.Data.Linq.Table<HOADON> HOADONs
+		{
+			get
+			{
+				return this.GetTable<HOADON>();
 			}
 		}
 		
@@ -150,6 +150,12 @@ namespace demobtl
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Fn_Report", IsComposable=true)]
+		public IQueryable<Fn_ReportResult> Fn_Report([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idbill)
+		{
+			return this.CreateMethodCallQuery<Fn_ReportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idbill);
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Fn_ThongKe", IsComposable=true)]
 		public IQueryable<Fn_ThongKeResult> Fn_ThongKe([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> dau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> cuoi)
 		{
@@ -160,12 +166,6 @@ namespace demobtl
 		public IQueryable<Fn_ThongKeLuongResult> Fn_ThongKeLuong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> dau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> cuoi)
 		{
 			return this.CreateMethodCallQuery<Fn_ThongKeLuongResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dau, cuoi);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Fn_Report", IsComposable=true)]
-		public IQueryable<Fn_ReportResult> Fn_Report([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idbill)
-		{
-			return this.CreateMethodCallQuery<Fn_ReportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idbill);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Fn_TienChuaCK", IsComposable=true)]
@@ -672,6 +672,120 @@ namespace demobtl
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DANHMUCMON")]
+	public partial class DANHMUCMON : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _Danh_Muc;
+		
+		private EntitySet<MON> _MONs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnDanh_MucChanging(string value);
+    partial void OnDanh_MucChanged();
+    #endregion
+		
+		public DANHMUCMON()
+		{
+			this._MONs = new EntitySet<MON>(new Action<MON>(this.attach_MONs), new Action<MON>(this.detach_MONs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Danh Muc]", Storage="_Danh_Muc", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Danh_Muc
+		{
+			get
+			{
+				return this._Danh_Muc;
+			}
+			set
+			{
+				if ((this._Danh_Muc != value))
+				{
+					this.OnDanh_MucChanging(value);
+					this.SendPropertyChanging();
+					this._Danh_Muc = value;
+					this.SendPropertyChanged("Danh_Muc");
+					this.OnDanh_MucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCMON_MON", Storage="_MONs", ThisKey="ID", OtherKey="Danh_Muc")]
+		public EntitySet<MON> MONs
+		{
+			get
+			{
+				return this._MONs;
+			}
+			set
+			{
+				this._MONs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MONs(MON entity)
+		{
+			this.SendPropertyChanging();
+			entity.DANHMUCMON = this;
+		}
+		
+		private void detach_MONs(MON entity)
+		{
+			this.SendPropertyChanging();
+			entity.DANHMUCMON = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.HOADON")]
 	public partial class HOADON : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -920,120 +1034,6 @@ namespace demobtl
 		{
 			this.SendPropertyChanging();
 			entity.HOADON = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DANHMUCMON")]
-	public partial class DANHMUCMON : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _Danh_Muc;
-		
-		private EntitySet<MON> _MONs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnDanh_MucChanging(string value);
-    partial void OnDanh_MucChanged();
-    #endregion
-		
-		public DANHMUCMON()
-		{
-			this._MONs = new EntitySet<MON>(new Action<MON>(this.attach_MONs), new Action<MON>(this.detach_MONs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Danh Muc]", Storage="_Danh_Muc", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Danh_Muc
-		{
-			get
-			{
-				return this._Danh_Muc;
-			}
-			set
-			{
-				if ((this._Danh_Muc != value))
-				{
-					this.OnDanh_MucChanging(value);
-					this.SendPropertyChanging();
-					this._Danh_Muc = value;
-					this.SendPropertyChanged("Danh_Muc");
-					this.OnDanh_MucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCMON_MON", Storage="_MONs", ThisKey="ID", OtherKey="Danh_Muc")]
-		public EntitySet<MON> MONs
-		{
-			get
-			{
-				return this._MONs;
-			}
-			set
-			{
-				this._MONs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_MONs(MON entity)
-		{
-			this.SendPropertyChanging();
-			entity.DANHMUCMON = this;
-		}
-		
-		private void detach_MONs(MON entity)
-		{
-			this.SendPropertyChanging();
-			entity.DANHMUCMON = null;
 		}
 	}
 	
@@ -1458,6 +1458,8 @@ namespace demobtl
 		
 		private bool _Admin;
 		
+		private bool _Active;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1468,6 +1470,8 @@ namespace demobtl
     partial void OnPasswordChanged();
     partial void OnAdminChanging(bool value);
     partial void OnAdminChanged();
+    partial void OnActiveChanging(bool value);
+    partial void OnActiveChanged();
     #endregion
 		
 		public TAIKHOAN()
@@ -1535,6 +1539,26 @@ namespace demobtl
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit NOT NULL")]
+		public bool Active
+		{
+			get
+			{
+				return this._Active;
+			}
+			set
+			{
+				if ((this._Active != value))
+				{
+					this.OnActiveChanging(value);
+					this.SendPropertyChanging();
+					this._Active = value;
+					this.SendPropertyChanged("Active");
+					this.OnActiveChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1552,6 +1576,86 @@ namespace demobtl
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class Fn_ReportResult
+	{
+		
+		private string _Ten;
+		
+		private decimal _Gia;
+		
+		private System.Nullable<int> _So_Luong;
+		
+		private System.Nullable<decimal> _Thanh_Tien;
+		
+		public Fn_ReportResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Ten
+		{
+			get
+			{
+				return this._Ten;
+			}
+			set
+			{
+				if ((this._Ten != value))
+				{
+					this._Ten = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Money NOT NULL")]
+		public decimal Gia
+		{
+			get
+			{
+				return this._Gia;
+			}
+			set
+			{
+				if ((this._Gia != value))
+				{
+					this._Gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_Luong", DbType="Int")]
+		public System.Nullable<int> So_Luong
+		{
+			get
+			{
+				return this._So_Luong;
+			}
+			set
+			{
+				if ((this._So_Luong != value))
+				{
+					this._So_Luong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thanh_Tien", DbType="Money")]
+		public System.Nullable<decimal> Thanh_Tien
+		{
+			get
+			{
+				return this._Thanh_Tien;
+			}
+			set
+			{
+				if ((this._Thanh_Tien != value))
+				{
+					this._Thanh_Tien = value;
+				}
 			}
 		}
 	}
@@ -1711,86 +1815,6 @@ namespace demobtl
 				if ((this._Luong != value))
 				{
 					this._Luong = value;
-				}
-			}
-		}
-	}
-	
-	public partial class Fn_ReportResult
-	{
-		
-		private string _Ten;
-		
-		private decimal _Gia;
-		
-		private System.Nullable<int> _So_Luong;
-		
-		private System.Nullable<decimal> _Thanh_Tien;
-		
-		public Fn_ReportResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Ten
-		{
-			get
-			{
-				return this._Ten;
-			}
-			set
-			{
-				if ((this._Ten != value))
-				{
-					this._Ten = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Money NOT NULL")]
-		public decimal Gia
-		{
-			get
-			{
-				return this._Gia;
-			}
-			set
-			{
-				if ((this._Gia != value))
-				{
-					this._Gia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_Luong", DbType="Int")]
-		public System.Nullable<int> So_Luong
-		{
-			get
-			{
-				return this._So_Luong;
-			}
-			set
-			{
-				if ((this._So_Luong != value))
-				{
-					this._So_Luong = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thanh_Tien", DbType="Money")]
-		public System.Nullable<decimal> Thanh_Tien
-		{
-			get
-			{
-				return this._Thanh_Tien;
-			}
-			set
-			{
-				if ((this._Thanh_Tien != value))
-				{
-					this._Thanh_Tien = value;
 				}
 			}
 		}
