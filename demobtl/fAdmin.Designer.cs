@@ -43,6 +43,7 @@
             this.dtgfoodcategory = new System.Windows.Forms.DataGridView();
             this.dtgfood = new System.Windows.Forms.DataGridView();
             this.tptable = new System.Windows.Forms.TabPage();
+            this.ptbtable = new System.Windows.Forms.PictureBox();
             this.btndeletetable = new System.Windows.Forms.Button();
             this.btnaddtable = new System.Windows.Forms.Button();
             this.dtgtable = new System.Windows.Forms.DataGridView();
@@ -77,7 +78,6 @@
             this.lbusername = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ptbtable = new System.Windows.Forms.PictureBox();
             this.dANHMUCMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tpfoodcategory.SuspendLayout();
@@ -85,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfood)).BeginInit();
             this.tptable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgtable)).BeginInit();
             this.tpBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).BeginInit();
@@ -96,7 +97,6 @@
             this.tpstaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgstaff)).BeginInit();
             this.tpchangeaccount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +125,7 @@
             // 
             // cbfoodcategory
             // 
+            this.cbfoodcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.cbfoodcategory, "cbfoodcategory");
             this.cbfoodcategory.FormattingEnabled = true;
             this.cbfoodcategory.Name = "cbfoodcategory";
@@ -203,6 +204,13 @@
             resources.ApplyResources(this.tptable, "tptable");
             this.tptable.Name = "tptable";
             this.tptable.UseVisualStyleBackColor = true;
+            // 
+            // ptbtable
+            // 
+            this.ptbtable.Image = global::demobtl.Properties.Resources.buiphotable;
+            resources.ApplyResources(this.ptbtable, "ptbtable");
+            this.ptbtable.Name = "ptbtable";
+            this.ptbtable.TabStop = false;
             // 
             // btndeletetable
             // 
@@ -456,13 +464,6 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // ptbtable
-            // 
-            this.ptbtable.Image = global::demobtl.Properties.Resources.buiphotable;
-            resources.ApplyResources(this.ptbtable, "ptbtable");
-            this.ptbtable.Name = "ptbtable";
-            this.ptbtable.TabStop = false;
-            // 
             // dANHMUCMONBindingSource
             // 
             this.dANHMUCMONBindingSource.DataMember = "DANHMUCMON";
@@ -482,6 +483,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfood)).EndInit();
             this.tptable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgtable)).EndInit();
             this.tpBill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).EndInit();
@@ -494,7 +496,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgstaff)).EndInit();
             this.tpchangeaccount.ResumeLayout(false);
             this.tpchangeaccount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
             this.ResumeLayout(false);

@@ -160,7 +160,7 @@ namespace demobtl
                     return;
                 }    
                 CHITIETHOADON insert = new CHITIETHOADON();
-                insert.Hoa_Don = select.ID;  
+                insert.Hoa_Don = select.ID; 
                 insert.Mon = (from food in db.MONs where food.Ten.Equals(cbfood.SelectedItem.ToString()) select food.ID).SingleOrDefault();
                 insert.So_Luong = Convert.ToInt32(nmrcount.Value);
                 CHITIETHOADON check = db.CHITIETHOADONs.Where(cthd => cthd.Mon.Equals(insert.Mon)
