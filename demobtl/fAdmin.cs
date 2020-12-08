@@ -40,7 +40,7 @@ namespace demobtl
         private void loadAccount()
         {
             using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
-                dtgaccount.DataSource = from ac in db.TAIKHOANs select ac;
+                dtgaccount.DataSource = from ac in db.TAIKHOANs select new { Username = ac.Username, Admin = ac.Admin, Active = ac.Active };
         }
         //tải danh sách bàn
         private void loadtable()
@@ -98,11 +98,17 @@ namespace demobtl
                 dtgsalary.DataSource = db.Fn_ThongKeLuong(dateTimePicker4.Value, dateTimePicker3.Value);
             }    
         }
+        //tải thông tin tài khoản cần đổi mật khẩu
+        private void loadeditacount()
+        {
+            TAIKHOAN edit = this.Tag as TAIKHOAN;
+            lbusername.Text = edit.Username;
+        }
         #endregion
 
         #region events
 
-        #region event_foodcategory
+        #region danh mục món
         //xóa danh mục món
         private void btndeletefoodcategory_Click(object sender, EventArgs e)
         {
@@ -123,7 +129,7 @@ namespace demobtl
             {
                 DANHMUCMON edit = db.DANHMUCMONs.Where(fc => fc.ID.Equals(id)).SingleOrDefault();
                 fEditFoodCategory f = new fEditFoodCategory();
-                f.foodcategory(edit);
+                f.Tag = edit;
                 f.ShowDialog();
             }
             loadFoodcategory();
@@ -136,7 +142,7 @@ namespace demobtl
             loadFoodcategory();
         }
         #endregion
-        #region event_account
+        #region tải khoản
         //thêm tải khoản
         private void btnadd_Click(object sender, EventArgs e)
         {
@@ -144,35 +150,70 @@ namespace demobtl
             f.ShowDialog();
             loadAccount();
         }
-        //xóa tài khoản
-        private void btndelete_Click(object sender, EventArgs e)
+        //kích hoạt | vô hiệu hóa tài khoản
+        private void btnedit_Click(object sender, EventArgs e)
         {
-            string usename = dtgaccount.SelectedCells[0].OwningRow.Cells["Username"].Value.ToString();
+            string username = dtgaccount.SelectedCells[0].OwningRow.Cells["Username"].Value.ToString();
+            if(String.Compare(username.Replace(" ",""), "Admin")==0)
+            {
+                MessageBox.Show("Vui lòng không vô hiệu hóa tài khoản Admin để tránh hệ thống bị lỗi! Bạn có thể đổi mật khẩu tài khoản Admin!");
+                return;
+            }
+                using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
+            {
+                TAIKHOAN edit = db.TAIKHOANs.Where(ac => ac.Username.Equals(username)).SingleOrDefault();
+                if(edit.Active == true)
+                {
+                    if (MessageBox.Show(String.Format("Xác nhận vô hiêu hóa tài khoản {0}", edit.Username),
+                    "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
+                        return;
+                    edit.Active = false;
+                }
+                else
+                {
+                    if (MessageBox.Show(String.Format("Xác nhận kích hoạt tài khoản {0}", edit.Username),
+                    "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
+                        return;
+                    edit.Active = true;
+                }    
+                db.SubmitChanges();
+                loadAccount();
+            }    
+        }
+        //Thay đổi mật khảu tài khoản
+        private void btneditaccount_Click(object sender, EventArgs e)
+        {
             using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
             {
-                TAIKHOAN acdelete = db.TAIKHOANs.Where(ac => ac.Username.Equals(usename)).SingleOrDefault();
-                db.TAIKHOANs.DeleteOnSubmit(acdelete);
+                TAIKHOAN edit = db.TAIKHOANs.Where(a => a.Username.Equals(lbusername.Text)).SingleOrDefault();
+                if (db.TAIKHOANs.Where(ac => ac.Password.Equals(txboldpass.Text) && ac.Username.Equals(lbusername.Text)).SingleOrDefault() == null)
+                {
+                    MessageBox.Show("Mật khẩu cũ sai!");
+                    return;
+                }
+                if (txbnewpass.Text.Trim() == "")
+                {
+                    MessageBox.Show("Mật khẩu không được để trống!");
+                    return;
+                }
+                if (txbnewpass.Text.ToUpper() != txbrepass.Text.ToUpper())
+                {
+                    MessageBox.Show("Mật khẩu không khớp!");
+                    return;
+                }
+                edit.Password = txbnewpass.Text;
                 db.SubmitChanges();
+                MessageBox.Show("Lưu thông tin thành công!");
+                txboldpass.ResetText();
+                txbnewpass.ResetText();
+                txbrepass.ResetText();
                 loadAccount();
             }
         }
-        //sửa tài khoản
-        private void btnchange_Click(object sender, EventArgs e)
-        {
-            string usename = dtgaccount.SelectedCells[0].OwningRow.Cells["Username"].Value.ToString();
-            using(TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
-            {
-                TAIKHOAN edit = db.TAIKHOANs.Where(ac => ac.Username.Equals(usename)).SingleOrDefault();
-                fEditAccount f = new fEditAccount();
-                f.account(edit);
-                f.ShowDialog();
-            }
-            loadAccount();
-        }
-        #endregion
-        #region event_food
-        //thêm món
-        private void btnaddfood_Click(object sender, EventArgs e)
+            #endregion
+        #region món
+            //thêm món
+            private void btnaddfood_Click(object sender, EventArgs e)
         {
             fAddFood f = new fAddFood();
             f.ShowDialog();
@@ -186,7 +227,7 @@ namespace demobtl
             {
                 MON edit = db.MONs.Where(food => food.ID.Equals(id)).SingleOrDefault();
                 fEditFood f = new fEditFood();
-                f.food(edit);
+                f.Tag = edit;
                 f.ShowDialog();
             }
             loadfood();
@@ -241,7 +282,7 @@ namespace demobtl
             {
                 NHANVIEN edit = db.NHANVIENs.Where(staff => staff.ID.Equals(id)).SingleOrDefault();
                 fEditStaff f = new fEditStaff();
-                f.staff(edit);
+                f.Tag = edit;
                 f.ShowDialog();
             }
             loadstaff();
@@ -268,6 +309,7 @@ namespace demobtl
             thongke();
             thongkeluong();
             loaddatimepiker();
+            loadeditacount();
         }
 
         private void cbfoodcategory_SelectedValueChanged(object sender, EventArgs e)
@@ -294,6 +336,8 @@ namespace demobtl
             thongkeluong();
         }
         #endregion
+
         #endregion
+
     }
 }

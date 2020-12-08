@@ -163,7 +163,20 @@ namespace demobtl
                 insert.Hoa_Don = select.ID;  
                 insert.Mon = (from food in db.MONs where food.Ten.Equals(cbfood.SelectedItem.ToString()) select food.ID).SingleOrDefault();
                 insert.So_Luong = Convert.ToInt32(nmrcount.Value);
-                db.CHITIETHOADONs.InsertOnSubmit(insert);
+                CHITIETHOADON check = db.CHITIETHOADONs.Where(cthd => cthd.Mon.Equals(insert.Mon)
+                                        && cthd.Hoa_Don.Equals(select.ID)).SingleOrDefault();
+                if(check !=null)
+                {
+                    if ((check.So_Luong + insert.So_Luong) < 0)
+                    {
+                        MessageBox.Show("Số lượng không hợp lệ");
+                        return;
+                    }
+                    else
+                        check.So_Luong += insert.So_Luong;
+                }   
+                else
+                    db.CHITIETHOADONs.InsertOnSubmit(insert);
                 db.SubmitChanges();
                 nmrcount.Value = 1;
                 showBill(choose.ID);
@@ -226,5 +239,12 @@ namespace demobtl
             }    
         }
         #endregion
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChangePassAccount fc = new fChangePassAccount();
+            fc.Tag = this.Tag;
+            fc.ShowDialog();
+        }
     }
 }

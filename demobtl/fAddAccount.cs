@@ -41,6 +41,7 @@ namespace demobtl
                 insert.Username = txbusename.Text;
                 insert.Password = txbpassword.Text;
                 insert.Admin = chkbox1.Checked;
+                insert.Active = true;
                 db.TAIKHOANs.InsertOnSubmit(insert);
                 db.SubmitChanges();
                 this.Close();

@@ -78,7 +78,7 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "ID";
             // 
-            // Editfoodcategory
+            // fEditFoodCategory
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,8 +89,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textbox1);
-            this.Name = "Editfoodcategory";
+            this.Name = "fEditFoodCategory";
             this.Text = "Sửa danh mục món";
+            this.Load += new System.EventHandler(this.fEditFoodCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

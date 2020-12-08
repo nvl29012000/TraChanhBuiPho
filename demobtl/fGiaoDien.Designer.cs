@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnstipaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnstripchamcong = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lsvbill = new System.Windows.Forms.ListView();
@@ -72,7 +73,8 @@
             // mnstipaccount
             // 
             this.mnstipaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngXuấtToolStripMenuItem});
+            this.đăngXuấtToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem});
             this.mnstipaccount.Name = "mnstipaccount";
             this.mnstipaccount.Size = new System.Drawing.Size(69, 20);
             this.mnstipaccount.Text = "Tài khoản";
@@ -80,9 +82,16 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // mnstripchamcong
             // 
@@ -271,7 +280,7 @@
             this.fpnltable.Size = new System.Drawing.Size(466, 478);
             this.fpnltable.TabIndex = 5;
             // 
-            // fgiaodien
+            // fGiaoDien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,7 +294,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.Name = "fgiaodien";
+            this.Name = "fGiaoDien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRÀ CHANH BỤI PHỐ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fgiaodien_FormClosing);
@@ -325,5 +334,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox txbsum;
         private System.Windows.Forms.Button btntablechange;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
     }
 }

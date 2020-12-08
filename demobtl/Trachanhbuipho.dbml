@@ -16,6 +16,13 @@
       <Association Name="NHANVIEN_CHAMCONG" Member="NHANVIEN" ThisKey="ID_NV" OtherKey="ID" Type="NHANVIEN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.DANHMUCMON" Member="DANHMUCMONs">
+    <Type Name="DANHMUCMON">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DANHMUCMON_MON" Member="MONs" ThisKey="ID" OtherKey="Danh_Muc" Type="MON" />
+    </Type>
+  </Table>
   <Table Name="dbo.CHITIETHOADON" Member="CHITIETHOADONs">
     <Type Name="CHITIETHOADON">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -24,13 +31,6 @@
       <Column Name="[So Luong]" Member="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HOADON_CHITIETHOADON" Member="HOADON" ThisKey="Hoa_Don" OtherKey="ID" Type="HOADON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="MON_CHITIETHOADON" Member="MON1" ThisKey="Mon" OtherKey="ID" Type="MON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DANHMUCMON" Member="DANHMUCMONs">
-    <Type Name="DANHMUCMON">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="[Danh Muc]" Member="Danh_Muc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="DANHMUCMON_MON" Member="MONs" ThisKey="ID" OtherKey="Danh_Muc" Type="MON" />
     </Type>
   </Table>
   <Table Name="dbo.HOADON" Member="HOADONs">

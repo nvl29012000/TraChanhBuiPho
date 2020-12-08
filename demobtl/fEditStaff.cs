@@ -13,23 +13,9 @@ namespace demobtl
 {
     public partial class fEditStaff : Form
     {
-        public delegate void senddata(NHANVIEN a);
-        public senddata staff;
         public fEditStaff()
         {
             InitializeComponent();
-            staff = new senddata(loadstaff);
-        }
-
-
-        private void loadstaff(NHANVIEN a)
-        {
-            lbID.Text = a.ID.ToString();
-            txbname.Text = a.Ho_Ten;
-            txbphone.Text = a.SDT;
-            dtpkstaff.Value = a.Sinh_Nhat;
-            cbxstaff.Text = a.Vi_Tri;
-            txbsalary.Text = a.Luong_Ngay.ToString();
         }
         private void btnedit_Click(object sender, EventArgs e)
         {
@@ -70,6 +56,20 @@ namespace demobtl
                 db.SubmitChanges();
             }
             this.Close();
+        }
+
+        private void fEditStaff_Load(object sender, EventArgs e)
+        {
+            NHANVIEN a = this.Tag as NHANVIEN;
+            using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
+            {
+                lbID.Text = a.ID.ToString();
+                txbname.Text = a.Ho_Ten;
+                txbphone.Text = a.SDT;
+                dtpkstaff.Value = a.Sinh_Nhat;
+                cbxstaff.Text = a.Vi_Tri;
+                txbsalary.Text = a.Luong_Ngay.ToString();
+            }    
         }
     }
 }

@@ -43,7 +43,6 @@
             this.dtgfoodcategory = new System.Windows.Forms.DataGridView();
             this.dtgfood = new System.Windows.Forms.DataGridView();
             this.tptable = new System.Windows.Forms.TabPage();
-            this.ptbtable = new System.Windows.Forms.PictureBox();
             this.btndeletetable = new System.Windows.Forms.Button();
             this.btnaddtable = new System.Windows.Forms.Button();
             this.dtgtable = new System.Windows.Forms.DataGridView();
@@ -53,8 +52,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dtgallbill = new System.Windows.Forms.DataGridView();
             this.tpaccount = new System.Windows.Forms.TabPage();
-            this.btndelete = new System.Windows.Forms.Button();
-            this.btnchange = new System.Windows.Forms.Button();
+            this.btnedit = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.dtgaccount = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -68,6 +66,18 @@
             this.btneditstaff = new System.Windows.Forms.Button();
             this.btnaddstaff = new System.Windows.Forms.Button();
             this.dtgstaff = new System.Windows.Forms.DataGridView();
+            this.tpchangeaccount = new System.Windows.Forms.TabPage();
+            this.btneditaccount = new System.Windows.Forms.Button();
+            this.txbrepass = new System.Windows.Forms.TextBox();
+            this.txbnewpass = new System.Windows.Forms.TextBox();
+            this.txboldpass = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbusername = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ptbtable = new System.Windows.Forms.PictureBox();
             this.dANHMUCMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tpfoodcategory.SuspendLayout();
@@ -75,7 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfood)).BeginInit();
             this.tptable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgtable)).BeginInit();
             this.tpBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).BeginInit();
@@ -86,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgsalary)).BeginInit();
             this.tpstaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgstaff)).BeginInit();
+            this.tpchangeaccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -193,13 +204,6 @@
             this.tptable.Name = "tptable";
             this.tptable.UseVisualStyleBackColor = true;
             // 
-            // ptbtable
-            // 
-            this.ptbtable.Image = global::demobtl.Properties.Resources.buiphotable;
-            resources.ApplyResources(this.ptbtable, "ptbtable");
-            this.ptbtable.Name = "ptbtable";
-            this.ptbtable.TabStop = false;
-            // 
             // btndeletetable
             // 
             resources.ApplyResources(this.btndeletetable, "btndeletetable");
@@ -260,27 +264,19 @@
             // 
             // tpaccount
             // 
-            this.tpaccount.Controls.Add(this.btndelete);
-            this.tpaccount.Controls.Add(this.btnchange);
+            this.tpaccount.Controls.Add(this.btnedit);
             this.tpaccount.Controls.Add(this.btnadd);
             this.tpaccount.Controls.Add(this.dtgaccount);
             resources.ApplyResources(this.tpaccount, "tpaccount");
             this.tpaccount.Name = "tpaccount";
             this.tpaccount.UseVisualStyleBackColor = true;
             // 
-            // btndelete
+            // btnedit
             // 
-            resources.ApplyResources(this.btndelete, "btndelete");
-            this.btndelete.Name = "btndelete";
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // btnchange
-            // 
-            resources.ApplyResources(this.btnchange, "btnchange");
-            this.btnchange.Name = "btnchange";
-            this.btnchange.UseVisualStyleBackColor = true;
-            this.btnchange.Click += new System.EventHandler(this.btnchange_Click);
+            resources.ApplyResources(this.btnedit, "btnedit");
+            this.btnedit.Name = "btnedit";
+            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 
@@ -308,6 +304,7 @@
             this.tabControl1.Controls.Add(this.tpfoodcategory);
             this.tabControl1.Controls.Add(this.tpsalary);
             this.tabControl1.Controls.Add(this.tpstaff);
+            this.tabControl1.Controls.Add(this.tpchangeaccount);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -388,6 +385,84 @@
             resources.ApplyResources(this.dtgstaff, "dtgstaff");
             this.dtgstaff.Name = "dtgstaff";
             // 
+            // tpchangeaccount
+            // 
+            this.tpchangeaccount.Controls.Add(this.btneditaccount);
+            this.tpchangeaccount.Controls.Add(this.txbrepass);
+            this.tpchangeaccount.Controls.Add(this.txbnewpass);
+            this.tpchangeaccount.Controls.Add(this.txboldpass);
+            this.tpchangeaccount.Controls.Add(this.label7);
+            this.tpchangeaccount.Controls.Add(this.label6);
+            this.tpchangeaccount.Controls.Add(this.label5);
+            this.tpchangeaccount.Controls.Add(this.lbusername);
+            this.tpchangeaccount.Controls.Add(this.label4);
+            this.tpchangeaccount.Controls.Add(this.label3);
+            resources.ApplyResources(this.tpchangeaccount, "tpchangeaccount");
+            this.tpchangeaccount.Name = "tpchangeaccount";
+            this.tpchangeaccount.UseVisualStyleBackColor = true;
+            // 
+            // btneditaccount
+            // 
+            resources.ApplyResources(this.btneditaccount, "btneditaccount");
+            this.btneditaccount.Name = "btneditaccount";
+            this.btneditaccount.UseVisualStyleBackColor = true;
+            this.btneditaccount.Click += new System.EventHandler(this.btneditaccount_Click);
+            // 
+            // txbrepass
+            // 
+            resources.ApplyResources(this.txbrepass, "txbrepass");
+            this.txbrepass.Name = "txbrepass";
+            this.txbrepass.UseSystemPasswordChar = true;
+            // 
+            // txbnewpass
+            // 
+            resources.ApplyResources(this.txbnewpass, "txbnewpass");
+            this.txbnewpass.Name = "txbnewpass";
+            this.txbnewpass.UseSystemPasswordChar = true;
+            // 
+            // txboldpass
+            // 
+            resources.ApplyResources(this.txboldpass, "txboldpass");
+            this.txboldpass.Name = "txboldpass";
+            this.txboldpass.UseSystemPasswordChar = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // lbusername
+            // 
+            resources.ApplyResources(this.lbusername, "lbusername");
+            this.lbusername.Name = "lbusername";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // ptbtable
+            // 
+            this.ptbtable.Image = global::demobtl.Properties.Resources.buiphotable;
+            resources.ApplyResources(this.ptbtable, "ptbtable");
+            this.ptbtable.Name = "ptbtable";
+            this.ptbtable.TabStop = false;
+            // 
             // dANHMUCMONBindingSource
             // 
             this.dANHMUCMONBindingSource.DataMember = "DANHMUCMON";
@@ -407,7 +482,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfood)).EndInit();
             this.tptable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgtable)).EndInit();
             this.tpBill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).EndInit();
@@ -418,6 +492,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgsalary)).EndInit();
             this.tpstaff.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgstaff)).EndInit();
+            this.tpchangeaccount.ResumeLayout(false);
+            this.tpchangeaccount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbtable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -440,8 +517,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dtgallbill;
-        private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.Button btnchange;
+        private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btndeletefood;
         private System.Windows.Forms.Button btneditfood;
@@ -465,5 +541,16 @@
         private System.Windows.Forms.Button btneditstaff;
         private System.Windows.Forms.Button btnaddstaff;
         private System.Windows.Forms.DataGridView dtgstaff;
+        private System.Windows.Forms.TabPage tpchangeaccount;
+        private System.Windows.Forms.Button btneditaccount;
+        private System.Windows.Forms.TextBox txbrepass;
+        private System.Windows.Forms.TextBox txbnewpass;
+        private System.Windows.Forms.TextBox txboldpass;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbusername;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

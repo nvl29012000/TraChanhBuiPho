@@ -36,12 +36,12 @@ namespace demobtl
     partial void InsertCHAMCONG(CHAMCONG instance);
     partial void UpdateCHAMCONG(CHAMCONG instance);
     partial void DeleteCHAMCONG(CHAMCONG instance);
-    partial void InsertCHITIETHOADON(CHITIETHOADON instance);
-    partial void UpdateCHITIETHOADON(CHITIETHOADON instance);
-    partial void DeleteCHITIETHOADON(CHITIETHOADON instance);
     partial void InsertDANHMUCMON(DANHMUCMON instance);
     partial void UpdateDANHMUCMON(DANHMUCMON instance);
     partial void DeleteDANHMUCMON(DANHMUCMON instance);
+    partial void InsertCHITIETHOADON(CHITIETHOADON instance);
+    partial void UpdateCHITIETHOADON(CHITIETHOADON instance);
+    partial void DeleteCHITIETHOADON(CHITIETHOADON instance);
     partial void InsertHOADON(HOADON instance);
     partial void UpdateHOADON(HOADON instance);
     partial void DeleteHOADON(HOADON instance);
@@ -102,19 +102,19 @@ namespace demobtl
 			}
 		}
 		
-		public System.Data.Linq.Table<CHITIETHOADON> CHITIETHOADONs
-		{
-			get
-			{
-				return this.GetTable<CHITIETHOADON>();
-			}
-		}
-		
 		public System.Data.Linq.Table<DANHMUCMON> DANHMUCMONs
 		{
 			get
 			{
 				return this.GetTable<DANHMUCMON>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CHITIETHOADON> CHITIETHOADONs
+		{
+			get
+			{
+				return this.GetTable<CHITIETHOADON>();
 			}
 		}
 		
@@ -460,6 +460,120 @@ namespace demobtl
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DANHMUCMON")]
+	public partial class DANHMUCMON : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _Danh_Muc;
+		
+		private EntitySet<MON> _MONs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnDanh_MucChanging(string value);
+    partial void OnDanh_MucChanged();
+    #endregion
+		
+		public DANHMUCMON()
+		{
+			this._MONs = new EntitySet<MON>(new Action<MON>(this.attach_MONs), new Action<MON>(this.detach_MONs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Danh Muc]", Storage="_Danh_Muc", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Danh_Muc
+		{
+			get
+			{
+				return this._Danh_Muc;
+			}
+			set
+			{
+				if ((this._Danh_Muc != value))
+				{
+					this.OnDanh_MucChanging(value);
+					this.SendPropertyChanging();
+					this._Danh_Muc = value;
+					this.SendPropertyChanged("Danh_Muc");
+					this.OnDanh_MucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCMON_MON", Storage="_MONs", ThisKey="ID", OtherKey="Danh_Muc")]
+		public EntitySet<MON> MONs
+		{
+			get
+			{
+				return this._MONs;
+			}
+			set
+			{
+				this._MONs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MONs(MON entity)
+		{
+			this.SendPropertyChanging();
+			entity.DANHMUCMON = this;
+		}
+		
+		private void detach_MONs(MON entity)
+		{
+			this.SendPropertyChanging();
+			entity.DANHMUCMON = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHITIETHOADON")]
 	public partial class CHITIETHOADON : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -669,120 +783,6 @@ namespace demobtl
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DANHMUCMON")]
-	public partial class DANHMUCMON : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _Danh_Muc;
-		
-		private EntitySet<MON> _MONs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnDanh_MucChanging(string value);
-    partial void OnDanh_MucChanged();
-    #endregion
-		
-		public DANHMUCMON()
-		{
-			this._MONs = new EntitySet<MON>(new Action<MON>(this.attach_MONs), new Action<MON>(this.detach_MONs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Danh Muc]", Storage="_Danh_Muc", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Danh_Muc
-		{
-			get
-			{
-				return this._Danh_Muc;
-			}
-			set
-			{
-				if ((this._Danh_Muc != value))
-				{
-					this.OnDanh_MucChanging(value);
-					this.SendPropertyChanging();
-					this._Danh_Muc = value;
-					this.SendPropertyChanged("Danh_Muc");
-					this.OnDanh_MucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCMON_MON", Storage="_MONs", ThisKey="ID", OtherKey="Danh_Muc")]
-		public EntitySet<MON> MONs
-		{
-			get
-			{
-				return this._MONs;
-			}
-			set
-			{
-				this._MONs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_MONs(MON entity)
-		{
-			this.SendPropertyChanging();
-			entity.DANHMUCMON = this;
-		}
-		
-		private void detach_MONs(MON entity)
-		{
-			this.SendPropertyChanging();
-			entity.DANHMUCMON = null;
 		}
 	}
 	

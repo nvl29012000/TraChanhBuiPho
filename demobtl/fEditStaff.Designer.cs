@@ -159,7 +159,7 @@
             this.lbID.TabIndex = 23;
             this.lbID.Text = "Họ tên";
             // 
-            // editstaff
+            // fEditStaff
             // 
             this.AcceptButton = this.btnedit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,8 +178,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbname);
             this.Controls.Add(this.label1);
-            this.Name = "editstaff";
+            this.Name = "fEditStaff";
             this.Text = "Sửa nhân viên";
+            this.Load += new System.EventHandler(this.fEditStaff_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

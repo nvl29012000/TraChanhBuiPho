@@ -12,18 +12,9 @@ namespace demobtl
 {
     public partial class fEditFoodCategory : Form
     {
-        public delegate void senddata(DANHMUCMON a);
-        public senddata foodcategory;
         public fEditFoodCategory()
         {
             InitializeComponent();
-            foodcategory = new senddata(loaddata);
-        }
-
-        private void loaddata(DANHMUCMON a)
-        {
-            lbID.Text = a.ID.ToString();
-            textbox1.Text = a.Danh_Muc;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +31,13 @@ namespace demobtl
                 db.SubmitChanges();
             }
             this.Close();
+        }
+
+        private void fEditFoodCategory_Load(object sender, EventArgs e)
+        {
+            DANHMUCMON edit = this.Tag as DANHMUCMON;
+            lbID.Text = edit.ID.ToString();
+            textbox1.Text = edit.Danh_Muc;
         }
     }
 }

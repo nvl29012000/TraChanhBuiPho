@@ -115,7 +115,7 @@
             this.lbIdfood.Size = new System.Drawing.Size(0, 13);
             this.lbIdfood.TabIndex = 15;
             // 
-            // editfood
+            // fEditFood
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,8 +130,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbfoodname);
             this.Controls.Add(this.label1);
-            this.Name = "editfood";
+            this.Name = "fEditFood";
             this.Text = "Sửa món";
+            this.Load += new System.EventHandler(this.fEditFood_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,23 +12,9 @@ namespace demobtl
 {
     public partial class fEditFood : Form
     {
-        public delegate void senddata(MON a);
-        public senddata food;
         public fEditFood()
         {
             InitializeComponent();
-            food = new senddata(loadfood);
-        }
-        private void loadfood(MON a)
-        {
-            using(TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
-            {
-                lbIdfood.Text = a.ID.ToString();
-                txbfoodname.Text = a.Ten;
-                textBox1.Text = a.Gia.ToString();
-                cbx1.DataSource = from fc in db.DANHMUCMONs select fc.Danh_Muc;
-                cbx1.SelectedItem = (from fc in db.DANHMUCMONs where fc.ID.Equals(a.Danh_Muc) select fc.Danh_Muc).SingleOrDefault();
-            }    
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +38,19 @@ namespace demobtl
                 db.SubmitChanges();
             }
             this.Close();
+        }
+
+        private void fEditFood_Load(object sender, EventArgs e)
+        {
+            MON a = this.Tag as MON;
+            using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
+            {
+                lbIdfood.Text = a.ID.ToString();
+                txbfoodname.Text = a.Ten;
+                textBox1.Text = a.Gia.ToString();
+                cbx1.DataSource = from fc in db.DANHMUCMONs select fc.Danh_Muc;
+                cbx1.SelectedItem = (from fc in db.DANHMUCMONs where fc.ID.Equals(a.Danh_Muc) select fc.Danh_Muc).SingleOrDefault();
+            }
         }
     }
 }
