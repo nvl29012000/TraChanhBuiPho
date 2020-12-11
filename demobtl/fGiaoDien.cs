@@ -250,13 +250,14 @@ namespace demobtl
                 showBill(choose.ID);
             }    
         }
-        #endregion
-
+        //mở form đổi mật khẩu của nhân viên
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fChangePassAccount fc = new fChangePassAccount();
             fc.Tag = this.Tag;
             fc.ShowDialog();
         }
+        #endregion
+
     }
 }
