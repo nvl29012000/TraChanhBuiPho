@@ -267,6 +267,8 @@
     <None Include="Resources\buiphotable.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\bg1.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

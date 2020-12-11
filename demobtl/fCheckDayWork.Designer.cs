@@ -50,6 +50,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(11, 31);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(648, 406);
             this.dataGridView1.TabIndex = 6;
@@ -72,13 +73,13 @@
             this.btncheck.UseVisualStyleBackColor = true;
             this.btncheck.Click += new System.EventHandler(this.btncheck_Click);
             // 
-            // fcheckdaywork
+            // fCheckDayWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "fcheckdaywork";
+            this.Name = "fCheckDayWork";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chấm công";
             this.panel1.ResumeLayout(false);

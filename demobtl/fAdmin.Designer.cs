@@ -80,6 +80,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dANHMUCMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpfoodcategory.SuspendLayout();
             this.pnlfoodcategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).BeginInit();
@@ -99,6 +100,7 @@
             this.tpchangeaccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tpfoodcategory
@@ -272,6 +274,7 @@
             // 
             // tpaccount
             // 
+            this.tpaccount.Controls.Add(this.pictureBox1);
             this.tpaccount.Controls.Add(this.btnedit);
             this.tpaccount.Controls.Add(this.btnadd);
             this.tpaccount.Controls.Add(this.dtgaccount);
@@ -472,6 +475,13 @@
             // 
             this.tAIKHOANBindingSource.DataMember = "TAIKHOAN";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::demobtl.Properties.Resources.bg1;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // fAdmin
             // 
             resources.ApplyResources(this, "$this");
@@ -498,6 +508,7 @@
             this.tpchangeaccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -553,5 +564,6 @@
         private System.Windows.Forms.Label lbusername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

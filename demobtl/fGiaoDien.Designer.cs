@@ -277,6 +277,7 @@
             // fpnltable
             // 
             this.fpnltable.AutoScroll = true;
+            this.fpnltable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fpnltable.Location = new System.Drawing.Point(0, 28);
             this.fpnltable.Name = "fpnltable";
             this.fpnltable.Size = new System.Drawing.Size(466, 478);
