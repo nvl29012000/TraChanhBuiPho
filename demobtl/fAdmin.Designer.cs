@@ -53,6 +53,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dtgallbill = new System.Windows.Forms.DataGridView();
             this.tpaccount = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnedit = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.dtgaccount = new System.Windows.Forms.DataGridView();
@@ -80,7 +81,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dANHMUCMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpfoodcategory.SuspendLayout();
             this.pnlfoodcategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfoodcategory)).BeginInit();
@@ -91,6 +91,7 @@
             this.tpBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).BeginInit();
             this.tpaccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgaccount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpsalary.SuspendLayout();
@@ -100,7 +101,6 @@
             this.tpchangeaccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tpfoodcategory
@@ -187,6 +187,7 @@
             this.dtgfoodcategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgfoodcategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgfoodcategory, "dtgfoodcategory");
+            this.dtgfoodcategory.MultiSelect = false;
             this.dtgfoodcategory.Name = "dtgfoodcategory";
             // 
             // dtgfood
@@ -195,6 +196,7 @@
             this.dtgfood.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgfood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgfood, "dtgfood");
+            this.dtgfood.MultiSelect = false;
             this.dtgfood.Name = "dtgfood";
             // 
             // tptable
@@ -234,6 +236,7 @@
             this.dtgtable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgtable, "dtgtable");
+            this.dtgtable.MultiSelect = false;
             this.dtgtable.Name = "dtgtable";
             // 
             // tpBill
@@ -270,6 +273,7 @@
             this.dtgallbill.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgallbill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgallbill, "dtgallbill");
+            this.dtgallbill.MultiSelect = false;
             this.dtgallbill.Name = "dtgallbill";
             // 
             // tpaccount
@@ -281,6 +285,13 @@
             resources.ApplyResources(this.tpaccount, "tpaccount");
             this.tpaccount.Name = "tpaccount";
             this.tpaccount.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::demobtl.Properties.Resources.bg1;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // btnedit
             // 
@@ -355,6 +366,7 @@
             this.dtgsalary.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgsalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgsalary, "dtgsalary");
+            this.dtgsalary.MultiSelect = false;
             this.dtgsalary.Name = "dtgsalary";
             // 
             // tpstaff
@@ -394,6 +406,7 @@
             this.dtgstaff.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgstaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtgstaff, "dtgstaff");
+            this.dtgstaff.MultiSelect = false;
             this.dtgstaff.Name = "dtgstaff";
             // 
             // tpchangeaccount
@@ -475,13 +488,6 @@
             // 
             this.tAIKHOANBindingSource.DataMember = "TAIKHOAN";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::demobtl.Properties.Resources.bg1;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // fAdmin
             // 
             resources.ApplyResources(this, "$this");
@@ -498,6 +504,7 @@
             this.tpBill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgallbill)).EndInit();
             this.tpaccount.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgaccount)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tpsalary.ResumeLayout(false);
@@ -508,7 +515,6 @@
             this.tpchangeaccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dANHMUCMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

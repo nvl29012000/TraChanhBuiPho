@@ -27,8 +27,9 @@ namespace demobtl
                 double tien = (double)db.Fn_TienChuaCK(a.ID);
                 // TODO: This line of code loads data into the 'Trachanhbuipho1DataSet.Fn_Report' table. You can move, or remove it, as needed.
                 this.Fn_ReportTableAdapter.Fill(this.Trachanhbuipho1DataSet.Fn_Report, a.ID);
+                string HD = String.Format("{0}{1}{2}-{3}", a.Ngay.Day, a.Ngay.Month, a.Ngay.Year,a.ID);
                 ReportParameter[] allPar = new ReportParameter[8];
-                allPar[0] = new ReportParameter("HD", a.ID.ToString());
+                allPar[0] = new ReportParameter("HD", HD);
                 allPar[1] = new ReportParameter("Ban", Ban);
                 allPar[2] = new ReportParameter("Ngay", a.Ngay.ToString());
                 allPar[3] = new ReportParameter("KH", a.Ten_Khach);

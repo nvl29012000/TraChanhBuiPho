@@ -15,7 +15,7 @@ create table TAIKHOAN
 )
 go
 insert into TAIKHOAN values
-('loc2909','vietloc2909',1)
+('Admin','admin',1)
 
 create table NHANVIEN
 (

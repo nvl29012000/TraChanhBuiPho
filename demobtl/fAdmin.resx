@@ -117,185 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;pnlfoodcategory.Name" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.Parent" xml:space="preserve">
-    <value>tpfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tpfoodcategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tpfoodcategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 496</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tpfoodcategory.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tpfoodcategory.Text" xml:space="preserve">
-    <value>Danh mục và món</value>
-  </data>
-  <data name="&gt;&gt;tpfoodcategory.Name" xml:space="preserve">
-    <value>tpfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;tpfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpfoodcategory.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpfoodcategory.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cbfoodcategory.Name" xml:space="preserve">
-    <value>cbfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;cbfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbfoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;cbfoodcategory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btndeletefood.Name" xml:space="preserve">
-    <value>btndeletefood</value>
-  </data>
-  <data name="&gt;&gt;btndeletefood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btndeletefood.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btndeletefood.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btneditfood.Name" xml:space="preserve">
-    <value>btneditfood</value>
-  </data>
-  <data name="&gt;&gt;btneditfood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btneditfood.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btneditfood.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnaddfood.Name" xml:space="preserve">
-    <value>btnaddfood</value>
-  </data>
-  <data name="&gt;&gt;btnaddfood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnaddfood.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btnaddfood.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbfoodcategory.Name" xml:space="preserve">
-    <value>lbfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;lbfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbfoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;lbfoodcategory.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btndeletefoodcategory.Name" xml:space="preserve">
-    <value>btndeletefoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btndeletefoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btndeletefoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btndeletefoodcategory.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btneditfoodcategory.Name" xml:space="preserve">
-    <value>btneditfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btneditfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btneditfoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btneditfoodcategory.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnaddfoodcategory.Name" xml:space="preserve">
-    <value>btnaddfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btnaddfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnaddfoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;btnaddfoodcategory.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;dtgfoodcategory.Name" xml:space="preserve">
-    <value>dtgfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;dtgfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgfoodcategory.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;dtgfoodcategory.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;dtgfood.Name" xml:space="preserve">
-    <value>dtgfood</value>
-  </data>
-  <data name="&gt;&gt;dtgfood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgfood.Parent" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;dtgfood.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="pnlfoodcategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 4</value>
-  </data>
-  <data name="pnlfoodcategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>635, 487</value>
-  </data>
-  <data name="pnlfoodcategory.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.Name" xml:space="preserve">
-    <value>pnlfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.Parent" xml:space="preserve">
-    <value>tpfoodcategory</value>
-  </data>
-  <data name="&gt;&gt;pnlfoodcategory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="cbfoodcategory.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -305,6 +127,7 @@
   <data name="cbfoodcategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 24</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbfoodcategory.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
@@ -558,77 +381,50 @@
   <data name="&gt;&gt;dtgfood.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;ptbtable.Name" xml:space="preserve">
-    <value>ptbtable</value>
+  <data name="pnlfoodcategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
   </data>
-  <data name="&gt;&gt;ptbtable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pnlfoodcategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 487</value>
   </data>
-  <data name="&gt;&gt;ptbtable.Parent" xml:space="preserve">
-    <value>tptable</value>
+  <data name="pnlfoodcategory.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;ptbtable.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlfoodcategory.Name" xml:space="preserve">
+    <value>pnlfoodcategory</value>
+  </data>
+  <data name="&gt;&gt;pnlfoodcategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlfoodcategory.Parent" xml:space="preserve">
+    <value>tpfoodcategory</value>
+  </data>
+  <data name="&gt;&gt;pnlfoodcategory.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btndeletetable.Name" xml:space="preserve">
-    <value>btndeletetable</value>
-  </data>
-  <data name="&gt;&gt;btndeletetable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btndeletetable.Parent" xml:space="preserve">
-    <value>tptable</value>
-  </data>
-  <data name="&gt;&gt;btndeletetable.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnaddtable.Name" xml:space="preserve">
-    <value>btnaddtable</value>
-  </data>
-  <data name="&gt;&gt;btnaddtable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnaddtable.Parent" xml:space="preserve">
-    <value>tptable</value>
-  </data>
-  <data name="&gt;&gt;btnaddtable.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dtgtable.Name" xml:space="preserve">
-    <value>dtgtable</value>
-  </data>
-  <data name="&gt;&gt;dtgtable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgtable.Parent" xml:space="preserve">
-    <value>tptable</value>
-  </data>
-  <data name="&gt;&gt;dtgtable.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tptable.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tpfoodcategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tptable.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tpfoodcategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 496</value>
   </data>
-  <data name="tptable.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="tpfoodcategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="tptable.Text" xml:space="preserve">
-    <value>Bàn</value>
+  <data name="tpfoodcategory.Text" xml:space="preserve">
+    <value>Danh mục và món</value>
   </data>
-  <data name="&gt;&gt;tptable.Name" xml:space="preserve">
-    <value>tptable</value>
+  <data name="&gt;&gt;tpfoodcategory.Name" xml:space="preserve">
+    <value>tpfoodcategory</value>
   </data>
-  <data name="&gt;&gt;tptable.Type" xml:space="preserve">
+  <data name="&gt;&gt;tpfoodcategory.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tptable.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tpfoodcategory.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tptable.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;tpfoodcategory.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="ptbtable.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -732,80 +528,29 @@
   <data name="&gt;&gt;dtgtable.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>tpBill</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker2.Name" xml:space="preserve">
-    <value>dateTimePicker2</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker2.Parent" xml:space="preserve">
-    <value>tpBill</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
-    <value>dateTimePicker1</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
-    <value>tpBill</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dtgallbill.Name" xml:space="preserve">
-    <value>dtgallbill</value>
-  </data>
-  <data name="&gt;&gt;dtgallbill.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgallbill.Parent" xml:space="preserve">
-    <value>tpBill</value>
-  </data>
-  <data name="&gt;&gt;dtgallbill.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tpBill.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tptable.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tpBill.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpBill.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tptable.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 496</value>
   </data>
-  <data name="tpBill.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tptable.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="tpBill.Text" xml:space="preserve">
-    <value>Thống kê</value>
+  <data name="tptable.Text" xml:space="preserve">
+    <value>Bàn</value>
   </data>
-  <data name="&gt;&gt;tpBill.Name" xml:space="preserve">
-    <value>tpBill</value>
+  <data name="&gt;&gt;tptable.Name" xml:space="preserve">
+    <value>tptable</value>
   </data>
-  <data name="&gt;&gt;tpBill.Type" xml:space="preserve">
+  <data name="&gt;&gt;tptable.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tpBill.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tptable.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tpBill.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;tptable.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -902,6 +647,33 @@
   </data>
   <data name="&gt;&gt;dtgallbill.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="tpBill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpBill.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpBill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>632, 496</value>
+  </data>
+  <data name="tpBill.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpBill.Text" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="&gt;&gt;tpBill.Name" xml:space="preserve">
+    <value>tpBill</value>
+  </data>
+  <data name="&gt;&gt;tpBill.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpBill.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpBill.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="pictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1029,324 +801,6 @@
   <data name="&gt;&gt;tpaccount.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tpsalary</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker3.Name" xml:space="preserve">
-    <value>dateTimePicker3</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker3.Parent" xml:space="preserve">
-    <value>tpsalary</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker4.Name" xml:space="preserve">
-    <value>dateTimePicker4</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker4.Parent" xml:space="preserve">
-    <value>tpsalary</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dtgsalary.Name" xml:space="preserve">
-    <value>dtgsalary</value>
-  </data>
-  <data name="&gt;&gt;dtgsalary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgsalary.Parent" xml:space="preserve">
-    <value>tpsalary</value>
-  </data>
-  <data name="&gt;&gt;dtgsalary.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tpsalary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tpsalary.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpsalary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 496</value>
-  </data>
-  <data name="tpsalary.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tpsalary.Text" xml:space="preserve">
-    <value>Lương</value>
-  </data>
-  <data name="&gt;&gt;tpsalary.Name" xml:space="preserve">
-    <value>tpsalary</value>
-  </data>
-  <data name="&gt;&gt;tpsalary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpsalary.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpsalary.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btndeletestaff.Name" xml:space="preserve">
-    <value>btndeletestaff</value>
-  </data>
-  <data name="&gt;&gt;btndeletestaff.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btndeletestaff.Parent" xml:space="preserve">
-    <value>tpstaff</value>
-  </data>
-  <data name="&gt;&gt;btndeletestaff.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btneditstaff.Name" xml:space="preserve">
-    <value>btneditstaff</value>
-  </data>
-  <data name="&gt;&gt;btneditstaff.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btneditstaff.Parent" xml:space="preserve">
-    <value>tpstaff</value>
-  </data>
-  <data name="&gt;&gt;btneditstaff.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnaddstaff.Name" xml:space="preserve">
-    <value>btnaddstaff</value>
-  </data>
-  <data name="&gt;&gt;btnaddstaff.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnaddstaff.Parent" xml:space="preserve">
-    <value>tpstaff</value>
-  </data>
-  <data name="&gt;&gt;btnaddstaff.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dtgstaff.Name" xml:space="preserve">
-    <value>dtgstaff</value>
-  </data>
-  <data name="&gt;&gt;dtgstaff.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgstaff.Parent" xml:space="preserve">
-    <value>tpstaff</value>
-  </data>
-  <data name="&gt;&gt;dtgstaff.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tpstaff.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tpstaff.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpstaff.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 496</value>
-  </data>
-  <data name="tpstaff.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="tpstaff.Text" xml:space="preserve">
-    <value>Nhân viên</value>
-  </data>
-  <data name="&gt;&gt;tpstaff.Name" xml:space="preserve">
-    <value>tpstaff</value>
-  </data>
-  <data name="&gt;&gt;tpstaff.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpstaff.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpstaff.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btneditaccount.Name" xml:space="preserve">
-    <value>btneditaccount</value>
-  </data>
-  <data name="&gt;&gt;btneditaccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btneditaccount.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;btneditaccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txbrepass.Name" xml:space="preserve">
-    <value>txbrepass</value>
-  </data>
-  <data name="&gt;&gt;txbrepass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbrepass.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;txbrepass.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txbnewpass.Name" xml:space="preserve">
-    <value>txbnewpass</value>
-  </data>
-  <data name="&gt;&gt;txbnewpass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbnewpass.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;txbnewpass.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txboldpass.Name" xml:space="preserve">
-    <value>txboldpass</value>
-  </data>
-  <data name="&gt;&gt;txboldpass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txboldpass.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;txboldpass.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbusername.Name" xml:space="preserve">
-    <value>lbusername</value>
-  </data>
-  <data name="&gt;&gt;lbusername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbusername.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;lbusername.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="tpchangeaccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tpchangeaccount.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpchangeaccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 496</value>
-  </data>
-  <data name="tpchangeaccount.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="tpchangeaccount.Text" xml:space="preserve">
-    <value>Đổi mật khẩu</value>
-  </data>
-  <data name="&gt;&gt;tpchangeaccount.Name" xml:space="preserve">
-    <value>tpchangeaccount</value>
-  </data>
-  <data name="&gt;&gt;tpchangeaccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpchangeaccount.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpchangeaccount.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>640, 522</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
@@ -1442,6 +896,33 @@
   </data>
   <data name="&gt;&gt;dtgsalary.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="tpsalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpsalary.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpsalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>632, 496</value>
+  </data>
+  <data name="tpsalary.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tpsalary.Text" xml:space="preserve">
+    <value>Lương</value>
+  </data>
+  <data name="&gt;&gt;tpsalary.Name" xml:space="preserve">
+    <value>tpsalary</value>
+  </data>
+  <data name="&gt;&gt;tpsalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpsalary.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpsalary.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="btndeletestaff.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1544,6 +1025,33 @@
   </data>
   <data name="&gt;&gt;dtgstaff.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="tpstaff.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpstaff.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpstaff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>632, 496</value>
+  </data>
+  <data name="tpstaff.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tpstaff.Text" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="&gt;&gt;tpstaff.Name" xml:space="preserve">
+    <value>tpstaff</value>
+  </data>
+  <data name="&gt;&gt;tpstaff.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpstaff.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpstaff.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="btneditaccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1814,6 +1322,54 @@
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="tpchangeaccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpchangeaccount.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpchangeaccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>632, 496</value>
+  </data>
+  <data name="tpchangeaccount.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tpchangeaccount.Text" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="&gt;&gt;tpchangeaccount.Name" xml:space="preserve">
+    <value>tpchangeaccount</value>
+  </data>
+  <data name="&gt;&gt;tpchangeaccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpchangeaccount.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpchangeaccount.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>640, 522</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="dANHMUCMONBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>198, 17</value>

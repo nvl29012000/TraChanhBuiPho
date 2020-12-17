@@ -103,9 +103,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(62, 59);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Tên";
+            this.label4.Text = "ID";
             // 
             // lbIdfood
             // 

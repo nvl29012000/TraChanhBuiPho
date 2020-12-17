@@ -480,6 +480,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
+                    <Value>HD</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
                     <Value>=Parameters!HD.Value</Value>
                     <Style />
                   </TextRun>
@@ -490,7 +494,7 @@
             <Top>0.8643cm</Top>
             <Left>6.51916cm</Left>
             <Height>0.6cm</Height>
-            <Width>1.73584cm</Width>
+            <Width>3.13814cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -516,8 +520,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.8643cm</Top>
-            <Left>8.32556cm</Left>
+            <Top>0.82903cm</Top>
+            <Left>9.83368cm</Left>
             <Height>0.6cm</Height>
             <Width>2.15917cm</Width>
             <ZIndex>4</ZIndex>
