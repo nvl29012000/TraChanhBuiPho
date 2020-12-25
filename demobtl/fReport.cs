@@ -24,7 +24,9 @@ namespace demobtl
             using (TrachanhbuiphoDataContext db = new TrachanhbuiphoDataContext())
             {
                 string Ban = (from b in db.BANs where b.ID.Equals(a.Ban) select b.Ten_Ban).SingleOrDefault();
-                double tien = (double)db.Fn_TienChuaCK(a.ID);
+                double tien = 0;
+                if(db.Fn_TienChuaCK(a.ID)!=null)
+                    tien = (double)db.Fn_TienChuaCK(a.ID);
                 // TODO: This line of code loads data into the 'Trachanhbuipho1DataSet.Fn_Report' table. You can move, or remove it, as needed.
                 this.Fn_ReportTableAdapter.Fill(this.Trachanhbuipho1DataSet.Fn_Report, a.ID);
                 string HD = String.Format("{0}{1}{2}-{3}", a.Ngay.Day, a.Ngay.Month, a.Ngay.Year,a.ID);

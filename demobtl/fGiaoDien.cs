@@ -13,6 +13,7 @@ namespace demobtl
 {
     public partial class fGiaoDien : Form
     {
+        public List<BAN> listtableout = new List<BAN>();
         public fGiaoDien()
         {
             InitializeComponent();
@@ -123,7 +124,10 @@ namespace demobtl
                         return;
                 }
                 else
+                {
+                    //listtableout.Add(a);
                     showBill(tableID);
+                }    
             }    
         }
         //đăng xuất
@@ -221,7 +225,7 @@ namespace demobtl
                 db.SubmitChanges();
                 fReport frp = new fReport();
                 frp.Tag = select;
-                frp.ShowDialog();
+                frp.Show();
                 Button focus = fpnltable.Tag as Button;
                 focus.BackColor = Color.Blue;
                 showBill(choose.ID);
